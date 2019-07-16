@@ -53,7 +53,7 @@ class Backup extends Controller
             Log::info("Backpack\BackupManager -- backup process has started");
         } catch (Exception $e) {
             Response::make($e->getMessage(), 500);
-			echo $e->getMessage();die;
+			
         }
         Session::put('msg','Backup completed');
         return redirect('/');
